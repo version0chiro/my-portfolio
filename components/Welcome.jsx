@@ -5,6 +5,8 @@ import { Store } from "../utils/Store";
 export default function Welcome() {
   const { state, dispatch } = useContext(Store);
 
+  const { show } = state;
+
   const fade1 = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },
@@ -34,8 +36,9 @@ export default function Welcome() {
     config: { duration: 1000 },
   });
 
+
   return (
-    <div>
+    <animated.div  className="relative bg-gradient-to-tr from-neutralButton-from to-neutralButton-to h-screen flex flex-col justify-center">
       <animated.div style={fade1}>
         <h1 className="font-Poppins text-5xl">Hello.</h1>
       </animated.div>
@@ -70,6 +73,6 @@ export default function Welcome() {
           </button>
         </animated.div>
       </div>
-    </div>
+    </animated.div>
   );
 }

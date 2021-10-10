@@ -12,6 +12,8 @@ module.exports = {
         "yesButton-to": "#92FE9E",
         "noButton-from": "#EF1EA0",
         "noButton-to": "#EF7A42",
+        "neutralButton-from": "#B991DB",
+        "neutralButton-to": "#67B0DF",
       },
     },
   },

@@ -3,7 +3,7 @@ import { createContext, useReducer } from "react";
 export const Store = createContext();
 
 const initialState = {
-  show: false,
+  show: true,
 };
 
 function reducer(state, action) {
