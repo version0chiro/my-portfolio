@@ -96,6 +96,51 @@ export default function Content() {
         </ParallaxLayer>
 
         <ParallaxLayer
+          offset={1}
+          speed={0.2}
+          // onClick={() => parallax.current.scrollTo(1)}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <div className="flex flex-col m-4 p-5">
+            <h1 className="font-Poppins text-white text-3xl md:text-4xl lg:text-6xl">
+              What do I do?
+            </h1>
+
+            <div className="flex flex-col items-center md:flex-row justify-around mt-4 ">
+              {/* <img
+                src="https://picsum.photos/200"
+                className="p-2 bg-white rounded w-3/5  md:w-3/5 lg:w-3/6 xl:w-2/6" 
+              /> */}
+              <App className=" md:w-3/6 " />
+
+              <div className="w-4/5 md:w-3/6 p-2 bg-white m-4 rounded flex flex-col content-around justify-around">
+                <h1 className="font-Poppins text-xl md:text-2xl lg:text-4xl font-bold">
+                  I turn your ideas into reality
+                </h1>
+
+                <p className="font-Poppins mt-5 mb-4 text-sm md:text-2xl lg:text-2xl">
+                  {`I have high experience in Data Structures and Algorithms and have been practising them in highly competitive environments such as Hackerrank (5 stars in problem-solving) and Leetcode (2.5 stars in ranking <10000). I have two technical papers published in the IETE-SF journal. Apart from this, I have a habit of exploring new and upcoming technologies regularly making me up to pace with the current market. I am also available as a freelancer and have provided satisfaction to multiple clients.`}
+                  <br />
+                  <br />
+                  <button
+                    className="m-3"
+                    onClick={() => {
+                      setModalVisible(true);
+                    }}
+                  >
+                    For the long version click here
+                  </button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer
           offset={1.3}
           speed={-0.3}
           style={{ pointerEvents: "none" }}
