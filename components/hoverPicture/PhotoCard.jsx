@@ -1,7 +1,18 @@
 import React, { useRef, useEffect } from "react";
 import { useSpring, animated, to } from "@react-spring/web";
 import { useGesture } from "react-use-gesture";
-import imgs from "./data";
+// import imgs from "./data";
+
+const imgs = [
+  "./selfPics/1.jpeg",
+  "./selfPics/2.jpeg",
+  "./selfPics/3.jpeg",
+  "./selfPics/4.jpeg",
+  "./selfPics/5.jpeg",
+  "./selfPics/7.jpeg",
+  "./selfPics/8.jpeg",
+  "./selfPics/9.jpeg",
+];
 
 import styles from "./styles.module.css";
 
@@ -63,12 +74,12 @@ export default function App() {
     { domTarget, eventOptions: { passive: false } }
   );
   return (
-    <div className={styles.container}>
+    <div className="flex items-center h-full justify-center md:w-1/2">
       <animated.div
         ref={domTarget}
         className={styles.card}
         style={{
-          transform: "perspective(200px)",
+          transform: "perspective(900px)",
           x,
           y,
           scale: to([scale, zoom], (s, z) => s + z),
@@ -79,11 +90,10 @@ export default function App() {
       >
         <animated.div style={{ transform: wheelY.to(wheel) }}>
           {imgs.map((img, i) => (
-            <img
+            <div
               key={i}
-              src={img}
-              alt={`${i}`}
-              className="w-full h-full"
+              style={{ backgroundImage: `url(${img})` }}
+              className="bg-cover bg-center bg-no-repeat"
             />
           ))}
         </animated.div>
