@@ -14,6 +14,12 @@ module.exports = {
         "noButton-to": "#EF7A42",
         "neutralButton-from": "#B991DB",
         "neutralButton-to": "#67B0DF",
+        spaceBackground: "#253237",
+      },
+      backgroundImage: {
+        space: "url('/pngwing.com.png')",
+        custom:"url('/customBackground.png')",
+        "svg-space": "url('/Black-Animation-Background.svg')",
       },
     },
   },

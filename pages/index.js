@@ -11,9 +11,9 @@ export default function Home() {
   const { show } = state;
 
   const transition = useTransition(show, {
-    from: { opacity: 0, display: "none" },
-    enter: { opacity: 1, display: "block" },
-    leave: { opacity: 0, display: "none" },
+    from: { opacity: 0, display: "none", transform: "translate3d(0,100%,0)" },
+    enter: { opacity: 1, display: "block", transform: "translate3d(0,0,0)" },
+    leave: { opacity: 0, display: "none", transform: "translate3d(0,100%,0)" },
     config: { delay: 500, duration: 1000 },
   });
 
