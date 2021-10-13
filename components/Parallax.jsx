@@ -9,6 +9,9 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import App from "./hoverPicture/PhotoCard";
 import "react-spring-modal/styles.css";
 
+import ProjectCarasole from "./projectCarasole/ProjectCarasole";
+
+
 export default function Content() {
   const { state, dispatch } = useContext(Store);
 
@@ -56,7 +59,7 @@ export default function Content() {
           }}
         >
           <div className="flex flex-col m-4 p-5">
-            <h1 className="font-Poppins text-white text-3xl md:text-4xl lg:text-6xl">
+            <h1 className="font-Poppins text-white mt-10 text-3xl md:text-4xl lg:text-6xl ">
               Who am I?
             </h1>
 
@@ -115,7 +118,7 @@ export default function Content() {
                 src="https://picsum.photos/200"
                 className="p-2 bg-white rounded w-3/5  md:w-3/5 lg:w-3/6 xl:w-2/6" 
               /> */}
-              <App className=" md:w-3/6 " />
+              <ProjectCarasole />
 
               <div className="w-4/5 md:w-3/6 p-2 bg-white m-4 rounded flex flex-col content-around justify-around">
                 <h1 className="font-Poppins text-xl md:text-2xl lg:text-4xl font-bold">
