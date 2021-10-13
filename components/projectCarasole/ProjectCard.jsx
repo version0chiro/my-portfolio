@@ -1,21 +1,24 @@
 import React from "react";
 
-function ProjectCard() {
+function ProjectCard(props) {
   return (
     <div>
       <div className="bg-white w-full rounded flex flex-col justify-center text-center">
-        <h1>Project Title</h1>
+        <h1 className="font-Poppins text-3xl">{props.title}</h1>
 
         <img
-          src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+          src={props.img}
           alt="project"
+          className="w-full h-64 object-contain"
         />
 
-        <p>
-          Witness quality Reddit memes right in your VS Code editor! And the
-          best part? It only uses the side bar! So your coding will be
-          uninterrupted but your meme knowledge will go to the moon 🚀🚀 !
-        </p>
+        <p className="font-Poppins text-xl">{props.description}</p>
+
+        <a href={props.url}>
+          <button className="border-2 p-2 rounded-md m-4 bg-gradient-to-r from-yesButton-from to-yesButton-to z-50">
+            Project Link
+          </button>
+        </a>
       </div>
     </div>
   );
@@ -25,8 +28,7 @@ function CardArrow(props) {
   return (
     <div>
       {props.isLeft ? (
-        <div >
-        
+        <div>
           <img
             src="https://img.icons8.com/ios/50/000000/chevron-left.png"
             alt="left arrow"

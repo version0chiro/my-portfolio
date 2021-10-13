@@ -11,7 +11,6 @@ import "react-spring-modal/styles.css";
 
 import ProjectCarasole from "./projectCarasole/ProjectCarasole";
 
-
 export default function Content() {
   const { state, dispatch } = useContext(Store);
 
@@ -22,7 +21,7 @@ export default function Content() {
   const parallax = useRef(null);
   return (
     <div className="w-screen h-screen bg-spaceBackground flex flex-col justify-center">
-      <Parallax ref={parallax} pages={3}>
+      <Parallax ref={parallax} pages={5}>
         <ParallaxLayer
           offset={1}
           speed={1}
@@ -99,7 +98,7 @@ export default function Content() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={1}
+          offset={1.5}
           speed={0.2}
           // onClick={() => parallax.current.scrollTo(1)}
           style={{
@@ -129,14 +128,7 @@ export default function Content() {
                   {`I have high experience in Data Structures and Algorithms and have been practising them in highly competitive environments such as Hackerrank (5 stars in problem-solving) and Leetcode (2.5 stars in ranking <10000). I have two technical papers published in the IETE-SF journal. Apart from this, I have a habit of exploring new and upcoming technologies regularly making me up to pace with the current market. I am also available as a freelancer and have provided satisfaction to multiple clients.`}
                   <br />
                   <br />
-                  <button
-                    className="m-3"
-                    onClick={() => {
-                      setModalVisible(true);
-                    }}
-                  >
-                    For the long version click here
-                  </button>
+                  👈Some of my projects 👈
                 </p>
               </div>
             </div>
