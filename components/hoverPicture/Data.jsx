@@ -8,3 +8,4 @@ export default [
   "./selfPics/8.jpeg",
   "./selfPics/9.jpeg",
 ];
+ 

@@ -10,6 +10,7 @@ import App from "./hoverPicture/PhotoCard";
 import "react-spring-modal/styles.css";
 
 import ProjectCarasole from "./projectCarasole/ProjectCarasole";
+import Deck from "./techStack/TeachStack";
 
 export default function Content() {
   const { state, dispatch } = useContext(Store);
@@ -98,7 +99,43 @@ export default function Content() {
         </ParallaxLayer>
 
         <ParallaxLayer
+          offset={1}
+          speed={0.4}
+          // onClick={() => parallax.current.scrollTo(1)}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
+          {" "}
+          <h1 className="font-Poppins text-white text-3xl md:text-4xl lg:text-6xl">
+            Tech Stack
+          </h1>
+        </ParallaxLayer>
+        <ParallaxLayer
           offset={1.5}
+          speed={0.4}
+          // onClick={() => parallax.current.scrollTo(1)}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
+          {" "}
+          <h1 className="font-Poppins text-white text-3xl md:text-4xl lg:text-6xl">
+            Tech Stack
+          </h1>
+          <div className="flex flex-col m-4 p-5 mt-11 justify-center items-center">
+            <Deck />
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={2.5}
           speed={0.2}
           // onClick={() => parallax.current.scrollTo(1)}
           style={{
@@ -147,16 +184,6 @@ export default function Content() {
           />
         </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={2.2}
-          speed={-0.4}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            pointerEvents: "none",
-          }}
-        ></ParallaxLayer>
         <button
           onClick={() => {
             dispatch({ type: "hideAll" });
