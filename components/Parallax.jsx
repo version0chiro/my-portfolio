@@ -126,7 +126,7 @@ export default function Content() {
           </div>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={1.95}
+          offset={2.0}
           speed={0.3}
           // onClick={() => parallax.current.scrollTo(1)}
           style={{
@@ -143,7 +143,7 @@ export default function Content() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={3.0}
+          offset={3.4}
           speed={0.2}
           // onClick={() => parallax.current.scrollTo(1)}
           style={{
