@@ -17,7 +17,7 @@
 }
 
 .all {
-  bottom:  10px;
+  bottom: 10px;
   position: fixed;
   overflow: hidden;
   width: 100%;
@@ -50,4 +50,68 @@
   border-radius: 10px;
   box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.4),
     0 10px 10px -10px rgba(50, 50, 73, 0.3);
+}
+
+.all > div > div > div {
+  will-change: inherit;
+}
+
+.project-heading {
+  color: rgb(219, 38, 38) !important;
+  font-size: 2.3em !important;
+  font-weight: 500 !important;
+  padding-top: 10px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important;
+  color: rgb(22, 1, 1) !important;
+}
+
+.tech-icons {
+  font-size: 4.5em !important;
+  margin: 15px !important;
+  padding: 10px !important;
+  opacity: 0.93 !important;
+  border: 1.7px solid rgba(200, 137, 230, 0.637) !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+  border-radius: 5px !important;
+  display: table !important;
+  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
+  overflow: hidden !important;
+  transition: all 0.4s ease 0s !important;
+  color: white;
+}
+
+@media (max-width: 767px) {
+  .tech-icons {
+    margin: 10px !important;
+  }
+}
+
+.tech-icons:hover {
+  transform: scale(1.05) !important;
+  overflow: hidden !important;
+  border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
+  color: rgb(197, 115, 230) ;
+}
+.tech-icon-images {
+  padding: 20px !important;
+  line-height: 1.6 !important;
+}
+
+.color-a {
+  color: #ffffff;
+}
+
+.color-a:hover {
+  transition: all 0.5s;
+  color: #b81cec;
 }

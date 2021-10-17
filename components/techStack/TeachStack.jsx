@@ -5,12 +5,43 @@ import { useGesture } from "react-use-gesture-legacy";
 import styles from "./styles.module.css";
 
 const cards = [
-  "https://upload.wikimedia.org/wikipedia/en/f/f5/RWS_Tarot_08_Strength.jpg",
-  "https://upload.wikimedia.org/wikipedia/en/5/53/RWS_Tarot_16_Tower.jpg",
-  "https://upload.wikimedia.org/wikipedia/en/9/9b/RWS_Tarot_07_Chariot.jpg",
-  "https://upload.wikimedia.org/wikipedia/en/d/db/RWS_Tarot_06_Lovers.jpg",
-  "https://upload.wikimedia.org/wikipedia/en/thumb/8/88/RWS_Tarot_02_High_Priestess.jpg/690px-RWS_Tarot_02_High_Priestess.jpg",
-  "https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg",
+  {
+    name: "React.js",
+    image: "https://img.icons8.com/office/150/000000/react.png",
+    description:
+      "React is a declarative, efficient, and flexible JavaScript library for building user interfaces or UI components. It lets you compose complex UIs from small and isolated pieces of code called “components”.",
+  },
+  {
+    name: "Node.js",
+    image: "https://img.icons8.com/color/150/000000/nodejs.png",
+    description:
+      "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.",
+  },
+  {
+    name: "Express.js",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png",
+    description:
+      "Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.",
+  },
+  {
+    name: "MongoDB",
+    image: "https://img.icons8.com/color/150/000000/mongodb.png",
+    description:
+      "MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schema. It was created by MongoDB Inc. and released under the open-source BSD license on April 12, 2012.",
+  },
+  {
+    name: "Next.js",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/1280px-Nextjs-logo.svg.png",
+    description:
+      "Next.js is an open-source development framework built on top of Node.js enabling React based web applications functionalities such as server-side       rendering and generating static websites.",
+  },
+  {
+    name: "Vue.js",
+    image: "https://img.icons8.com/color/150/000000/vue-js.png",
+    description:
+      "Vue.js is a progressive framework for building user interfaces. It is a view layer for building UI components with data-driven logic. It is a minimalistic framework for building user interfaces.",
+  },
 ];
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
@@ -18,7 +49,7 @@ const to = (i) => ({
   x: 0,
   y: i * -4,
   scale: 1,
-  rot: -10 + Math.random() * 20,
+  rot: -10 + Math.random() * 15,
   delay: i * 100,
 });
 const from = (i) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 });
@@ -68,8 +99,6 @@ function Deck() {
   // Now we're just mapping the animated values to our view, that's it. Btw, this component only renders once. :-)
   return (
     <div className={styles.all}>
-           
-
       {props.map(({ x, y, rot, scale }, i) => (
         <animated.div
           key={i}
@@ -85,13 +114,28 @@ function Deck() {
             {...bind(i)}
             style={{
               transform: interpolate([rot, scale], trans),
-              backgroundImage: `url(${cards[i]})`,
+              // backgroundImage: `url(${cards[i]})`,
             }}
           />
+          <animated.div
+            {...bind(i)}
+            style={{
+              width: "inherit",
+              height: "inherit",
+              position: "absolute",
+
+              transform: interpolate([rot, scale], trans),
+            }}
+            className="flex flex-col justify-around items-center"
+          >
+            <h1 className="text-3xl font-Poppins">{cards[i].name}</h1>
+            <img src={cards[i].image} className="w-1/2" />
+            <p className="text-lg p-2 font-Poppins">{cards[i].description}</p>
+          </animated.div>
         </animated.div>
       ))}
     </div>
   );
 }
 
-export default Deck
+export default Deck;

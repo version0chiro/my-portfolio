@@ -11,6 +11,7 @@ import "react-spring-modal/styles.css";
 
 import ProjectCarasole from "./projectCarasole/ProjectCarasole";
 import Deck from "./techStack/TeachStack";
+import Techstack from "./techStack/Techstack";
 
 export default function Content() {
   const { state, dispatch } = useContext(Store);
@@ -30,18 +31,12 @@ export default function Content() {
             backgroundColor: "#805E73",
           }}
         />
-        <ParallaxLayer
-          offset={2}
-          speed={1}
-          style={{
-            backgroundColor: "#87BCDE",
-          }}
-        />
+        <ParallaxLayer offset={2} speed={1} className="bg-black" />
 
         <ParallaxLayer
           offset={0}
           speed={0}
-          factor={3}
+          factor={5}
           className="bg-custom bg-center bg-cover"
           style={{
             backgroundRepeat: "inherit",
@@ -99,7 +94,7 @@ export default function Content() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={1}
+          offset={0.8}
           speed={0.4}
           // onClick={() => parallax.current.scrollTo(1)}
           style={{
@@ -115,7 +110,7 @@ export default function Content() {
           </h1>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={1.5}
+          offset={1.0}
           speed={0.4}
           // onClick={() => parallax.current.scrollTo(1)}
           style={{
@@ -126,16 +121,29 @@ export default function Content() {
           }}
         >
           {" "}
-          <h1 className="font-Poppins text-white text-3xl md:text-4xl lg:text-6xl">
-            Tech Stack
-          </h1>
-          <div className="flex flex-col m-4 p-5 mt-11 justify-center items-center">
+          <div className="flex flex-row m-4 p-5 mt-11 justify-center items-center">
             <Deck />
+          </div>
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={1.95}
+          speed={0.3}
+          // onClick={() => parallax.current.scrollTo(1)}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
+          {" "}
+          <div className="flex flex-row m-4 p-5 mt-11 justify-center items-center">
+            <Techstack />
           </div>
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={2.5}
+          offset={3.0}
           speed={0.2}
           // onClick={() => parallax.current.scrollTo(1)}
           style={{
@@ -176,11 +184,47 @@ export default function Content() {
           offset={1.3}
           speed={-0.3}
           style={{ pointerEvents: "none" }}
-          className=""
         >
           <img
-            className="ml-10"
-            src="https://img.icons8.com/office/48/000000/superman.png"
+            className="ml-10 w-2/12 md:w-1/12"
+            src="https://img.icons8.com/office/80/000000/superman.png"
+          />
+
+          <img
+            className="ml-10 w-2/12 md:w-1/12 float-right"
+            src="https://img.icons8.com/color/150/000000/batman.png"
+          />
+        </ParallaxLayer>
+        
+        <ParallaxLayer
+          offset={3.6}
+          speed={-0.6}
+          style={{ pointerEvents: "none" }}
+        >
+          <img
+            className="ml-10 w-2/12 md:w-1/12"
+            src="https://img.icons8.com/color/150/000000/tanjiro-kamado.png"
+          />
+          <img
+            className="ml-10 w-2/12 md:w-1/12 float-right"
+            src="https://img.icons8.com/color/150/000000/sasuke-uchiha.png"
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={2.4}
+          speed={-0.5}
+          style={{ pointerEvents: "none" }}
+          horizontal={false}
+        >
+          <img
+            className="ml-14 w-2/12 md:w-1/12"
+            src="https://img.icons8.com/external-wanicon-lineal-color-wanicon/80/000000/external-cowboy-independence-day-wanicon-lineal-color-wanicon.png"
+          />
+
+          <img
+            className="ml-10 w-2/12 md:w-1/12 float-right"
+            src="https://img.icons8.com/ios-filled/50/000000/github.png"
           />
         </ParallaxLayer>
 
