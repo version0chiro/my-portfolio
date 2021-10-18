@@ -35,12 +35,19 @@ function Techstack() {
   return (
     <Container id="stack" fluid className={styles["about-section"]}>
       <h1 className={styles["project-heading"]}>
-        <strong className={styles["color-a"]}>Some Other Stuff I know </strong>
+        <strong className={styles["color-a"] + " p-7"}>
+          Some Other Stuff I know{" "}
+        </strong>
       </h1>
       <h1 className={styles["project-heading"]}>
-        <strong className={styles["color-a"]}>Languages</strong>
+        <strong className={styles["color-a"] + " text-3xl md:text-4xl"}>
+          Languages
+        </strong>
       </h1>
-      <Row style={{ justifyContent: "center", paddingBottom: "50px" }} className="flex flex-wrap">
+      <Row
+        style={{ justifyContent: "center", paddingBottom: "50px" }}
+        className="flex flex-wrap"
+      >
         <Col xs={4} md={2} className={styles["tech-icons"]}>
           <CgCPlusPlus />
         </Col>
@@ -67,9 +74,14 @@ function Techstack() {
         </Col>
       </Row>
       <h1 className={styles["project-heading"]}>
-        <strong className={styles["color-a"]}>Framework/Technologies</strong>
+        <strong className={styles["color-a"] + " text-3xl md:text-4xl"}>
+          Framework/Technologies
+        </strong>
       </h1>
-      <Row style={{ justifyContent: "center", paddingBottom: "50px" }} className="flex flex-wrap"> 
+      <Row
+        style={{ justifyContent: "center", paddingBottom: "50px" }}
+        className="flex flex-wrap"
+      >
         <Col xs={4} md={2} className={styles["tech-icons"]}>
           <SiTensorflow />
         </Col>
@@ -111,9 +123,14 @@ function Techstack() {
         </Col>
       </Row>
       <h1 className={styles["project-heading"]}>
-        <strong className={styles["color-a"]}>Databases</strong>
+        <strong className={styles["color-a"] + " text-3xl md:text-4xl"}>
+          Databases
+        </strong>
       </h1>
-      <Row style={{ justifyContent: "center", paddingBottom: "50px" }} className="flex flex-wrap">
+      <Row
+        style={{ justifyContent: "center", paddingBottom: "50px" }}
+        className="flex flex-wrap"
+      >
         <Col xs={4} md={2} className={styles["tech-icons"]}>
           <DiMongodb />
         </Col>

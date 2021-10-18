@@ -12,6 +12,7 @@ import "react-spring-modal/styles.css";
 import ProjectCarasole from "./projectCarasole/ProjectCarasole";
 import Deck from "./techStack/TeachStack";
 import Techstack from "./techStack/Techstack";
+import ProjectBlob from "./projectOpener/ProjectBlob";
 
 export default function Content() {
   const { state, dispatch } = useContext(Store);
@@ -23,7 +24,7 @@ export default function Content() {
   const parallax = useRef(null);
   return (
     <div className="w-screen h-screen bg-spaceBackground flex flex-col justify-center">
-      <Parallax ref={parallax} pages={5}>
+      <Parallax ref={parallax} pages={6}>
         <ParallaxLayer
           offset={1}
           speed={1}
@@ -33,10 +34,12 @@ export default function Content() {
         />
         <ParallaxLayer offset={2} speed={1} className="bg-black" />
 
+        <ParallaxLayer offset={3.5} speed={0.5} className="bg-yesButton-from" />
+
         <ParallaxLayer
           offset={0}
           speed={0}
-          factor={5}
+          factor={6}
           className="bg-custom bg-center bg-cover"
           style={{
             backgroundRepeat: "inherit",
@@ -143,7 +146,7 @@ export default function Content() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={3.4}
+          offset={3.6}
           speed={0.2}
           // onClick={() => parallax.current.scrollTo(1)}
           style={{
@@ -180,33 +183,47 @@ export default function Content() {
           </div>
         </ParallaxLayer>
 
+        <ParallaxLayer offset={4.6} speed={0.2}>
+          <div>
+            <div className="flex flex-col m-4 p-5">
+              <h1 className="font-Poppins text-white text-3xl md:text-4xl lg:text-6xl">
+                Statistics and Numbers
+              </h1>
+              <div>
+                <ProjectBlob index={0} />
+              </div>
+              <ProjectBlob index={1} />
+            </div>
+          </div>
+        </ParallaxLayer>
+
         <ParallaxLayer
           offset={1.3}
           speed={-0.3}
           style={{ pointerEvents: "none" }}
         >
           <img
-            className="ml-10 w-2/12 md:w-1/12"
+            className="md:ml-10 w-2/12 md:w-1/12"
             src="https://img.icons8.com/office/80/000000/superman.png"
           />
 
           <img
-            className="ml-10 w-2/12 md:w-1/12 float-right"
+            className="md:ml-10 w-2/12 md:w-1/12 float-right"
             src="https://img.icons8.com/color/150/000000/batman.png"
           />
         </ParallaxLayer>
-        
+
         <ParallaxLayer
           offset={3.6}
           speed={-0.6}
           style={{ pointerEvents: "none" }}
         >
           <img
-            className="ml-10 w-2/12 md:w-1/12"
+            className="md:ml-10 w-2/12 md:w-1/12"
             src="https://img.icons8.com/color/150/000000/tanjiro-kamado.png"
           />
           <img
-            className="ml-10 w-2/12 md:w-1/12 float-right"
+            className="md:ml-10 w-2/12 md:w-1/12 float-right"
             src="https://img.icons8.com/color/150/000000/sasuke-uchiha.png"
           />
         </ParallaxLayer>
@@ -218,12 +235,12 @@ export default function Content() {
           horizontal={false}
         >
           <img
-            className="ml-14 w-2/12 md:w-1/12"
+            className="md:ml-14 w-2/12 md:w-1/12"
             src="https://img.icons8.com/external-wanicon-lineal-color-wanicon/80/000000/external-cowboy-independence-day-wanicon-lineal-color-wanicon.png"
           />
 
           <img
-            className="ml-10 w-2/12 md:w-1/12 float-right"
+            className="md:ml-10 w-2/12 md:w-1/12 float-right"
             src="https://img.icons8.com/ios-filled/50/000000/github.png"
           />
         </ParallaxLayer>

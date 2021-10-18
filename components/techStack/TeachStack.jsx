@@ -42,6 +42,12 @@ const cards = [
     description:
       "Vue.js is a progressive framework for building user interfaces. It is a view layer for building UI components with data-driven logic. It is a minimalistic framework for building user interfaces.",
   },
+  {
+    name: "Angular.js",
+    image: "https://img.icons8.com/color/150/000000/angularjs.png",
+    description:
+      "ngularJS is a structural framework for dynamic web apps. With AngularJS, designers can use HTML as the template language and it allows for the extension of HTML's syntax to convey the application's components effortlessly.",
+  },
 ];
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
